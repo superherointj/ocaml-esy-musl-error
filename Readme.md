@@ -9,7 +9,8 @@
 `
 
 ## merlin+ppx_tools
-Logs: erro-combinado-merlin-ppx_tools.logs
+Logs: `logs/erro-combinado-merlin-ppx_tools.logs`
+
 Config: 
 `
   "devDependencies": {
@@ -20,7 +21,8 @@ Config:
 `
 
 ## merlin
-Logs: logs/erro-com-merlin-apenas.logs
+Logs: `logs/erro-com-merlin-apenas.logs`
+
 Config: 
 `
   "devDependencies": {
@@ -33,7 +35,8 @@ Config:
 `
 
 ## ppx_tools
-Logs: logs/erro-com-merlin-apenas.logs
+Logs: `logs/erro-com-merlin-apenas.logs`
+
 Config: 
 `
   "devDependencies": {
