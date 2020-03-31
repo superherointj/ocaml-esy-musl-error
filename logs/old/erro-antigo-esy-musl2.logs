@@ -1,0 +1,27 @@
+info esy build 0.6.2 (using package.json)
+info building @opam/merlin@opam:3.3.4~4.10preview1@f6ba6a5a
+error: build failed with exit code: 1
+  build log:
+    # esy-build-package: building: @opam/merlin@opam:3.3.4~4.10preview1
+    # esy-build-package: pwd: /home/intj/.esy/3/b/opam__s__merlin-opam__c__3.3.4~4.10preview1-ec4a42b3
+    # esy-build-package: running: 'dune' 'build' '-p' 'merlin' '-j' '4'
+        ocamlopt src/utils/.merlin_utils.objs/native/std.{cmx,o}
+    File "_none_", line 1:
+    Warning 58: no cmx file was found in path for module Easy_format, and its interface was not compiled with -opaque
+        ocamlopt src/utils/.merlin_utils.objs/native/logger.{cmx,o}
+    File "_none_", line 1:
+    Warning 58: no cmx file was found in path for module Easy_format, and its interface was not compiled with -opaque
+          ocamlc src/analysis/.merlin_analysis.objs/byte/polarity_search.{cmi,cmo,cmt} (exit 2)
+    (cd _build/default && /home/intj/.esy/3_____________________________________________________________________/i/ocaml-08892340/bin/ocamlc.opt -w -40 -g -bin-annot -I src/analysis/.merlin_analysis.objs/byte -I src/config/.config.objs/byte -I src/config/.config.objs/native -I src/extend/.merlin_extend.objs/byte -I src/extend/.merlin_extend.objs/native -I src/frontend/.query_protocol.objs/byte -I src/frontend/.query_protocol.objs/native -I src/kernel/.merlin_kernel.objs/byte -I src/kernel/.merlin_kernel.objs/native -I src/ocaml/merlin_specific/.merlin_specific.objs/byte -I src/ocaml/merlin_specific/.merlin_specific.objs/native -I src/ocaml/parsing/.parsing.objs/byte -I src/ocaml/parsing/.parsing.objs/native -I src/ocaml/preprocess/.preprocess.objs/byte -I src/ocaml/preprocess/.preprocess.objs/native -I src/ocaml/typing/.typing.objs/byte -I src/ocaml/typing/.typing.objs/native -I src/ocaml/utils/.utils.objs/byte -I src/ocaml/utils/.utils.objs/native -I src/utils/.merlin_utils.objs/byte -I src/utils/.merlin_utils.objs/native -no-alias-deps -o src/analysis/.merlin_analysis.objs/byte/polarity_search.cmo -c -impl src/analysis/polarity_search.ml)
+    File "src/analysis/polarity_search.ml", line 83, characters 17-57:
+    Error: This expression has type Path.t but an expression was expected of type
+             'a * 'b
+        ocamlopt src/ocaml/preprocess/.preprocess.objs/native/parser_raw.{cmx,o} (exit 2)
+    (cd _build/default && /home/intj/.esy/3_____________________________________________________________________/i/ocaml-08892340/bin/ocamlopt.opt -w -40 -w -3 -g -I src/ocaml/preprocess/.preprocess.objs/byte -I src/ocaml/preprocess/.preprocess.objs/native -I src/ocaml/parsing/.parsing.objs/byte -I src/ocaml/parsing/.parsing.objs/native -I src/ocaml/utils/.utils.objs/byte -I src/ocaml/utils/.utils.objs/native -I src/utils/.merlin_utils.objs/byte -I src/utils/.merlin_utils.objs/native -intf-suffix .ml -no-alias-deps -o src/ocaml/preprocess/.preprocess.objs/native/parser_raw.cmx -c -impl src/ocaml/preprocess/parser_raw.ml)
+    File "src/ocaml/preprocess/parser_raw.ml", line 5, characters 2-42:
+    Error: Unbound value MenhirLib.StaticVersion.require_20190924
+    error: command failed: 'dune' 'build' '-p' 'merlin' '-j' '4' (exited with 1)
+    esy-build-package: exiting with errors above...
+    
+  building @opam/merlin@opam:3.3.4~4.10preview1
+esy: exiting due to errors above

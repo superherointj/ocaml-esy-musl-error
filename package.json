@@ -1,0 +1,29 @@
+{
+  "name": "esymusl",
+  "version": "0.0.1",
+  "description": "",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "release": {
+      "releasedBinaries": [
+        "app"
+      ]
+    }
+  },
+  "scripts": {
+    "start": "esy",
+    "clean": "esy clean; rm -rf _esy esy.lock node_modules _build *.install"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@esy-ocaml/reason": "*"
+  },
+  "devDependencies": {
+    "ocaml": "4.7.1004",
+    "@opam/merlin": "*",
+    "@opam/ppx_tools": "*"
+  },
+  "resolutions": {
+    "ocaml": "github:EduardoRFS/ocaml:package.json#594b838eb90f3b7ed02cd7d0112ce0f52efe95e3"
+  }
+}

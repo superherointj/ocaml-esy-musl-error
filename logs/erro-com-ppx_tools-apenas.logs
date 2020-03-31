@@ -1,0 +1,27 @@
+2700x-PC intj ~/dev/ocaml/demo-musl-erro $ esy build
+info esy build 0.6.2 (using package.json)
+info building @opam/ppx_tools@opam:6.1+4.10.0@8bb09441
+error: build failed with exit code: 1
+  build log:
+    # esy-build-package: building: @opam/ppx_tools@opam:6.1+4.10.0
+    # esy-build-package: pwd: /home/intj/.esy/3/b/opam__s__ppx__tools-opam__c__6.1+4.10.0-4fec8d52
+    # esy-build-package: running: 'dune' 'build' '-p' 'ppx_tools' '-j' '4'
+          ocamlc .ppx_tools.objs/byte/ast_mapper_class.{cmi,cmti} (exit 2)
+    (cd _build/default && /home/intj/.esy/3_____________________________________________________________________/i/ocaml-0592509b/bin/ocamlc.opt -w -40 -g -bin-annot -I .ppx_tools.objs/byte -I /home/intj/.esy/3_____________________________________________________________________/i/ocaml-0592509b/lib/ocaml/compiler-libs -no-alias-deps -o .ppx_tools.objs/byte/ast_mapper_class.cmi -c -intf ast_mapper_class.mli)
+    File "ast_mapper_class.mli", line 13, characters 23-33:
+    Error: Unbound type constructor binding_op
+          ocamlc .ppx_tools.objs/byte/ast_convenience.{cmo,cmt} (exit 2)
+    (cd _build/default && /home/intj/.esy/3_____________________________________________________________________/i/ocaml-0592509b/bin/ocamlc.opt -w -40 -g -bin-annot -I .ppx_tools.objs/byte -I /home/intj/.esy/3_____________________________________________________________________/i/ocaml-0592509b/lib/ocaml/compiler-libs -intf-suffix .ml -no-alias-deps -o .ppx_tools.objs/byte/ast_convenience.cmo -c -impl ast_convenience.ml)
+    File "ast_convenience.ml", line 109, characters 29-38:
+    Error: Unbound record field attr_name
+    Hint: Did you mean pmtd_name?
+        ocamlopt .ppx_tools.objs/native/ast_convenience.{cmx,o} (exit 2)
+    (cd _build/default && /home/intj/.esy/3_____________________________________________________________________/i/ocaml-0592509b/bin/ocamlopt.opt -w -40 -g -I .ppx_tools.objs/byte -I .ppx_tools.objs/native -I /home/intj/.esy/3_____________________________________________________________________/i/ocaml-0592509b/lib/ocaml/compiler-libs -intf-suffix .ml -no-alias-deps -o .ppx_tools.objs/native/ast_convenience.cmx -c -impl ast_convenience.ml)
+    File "ast_convenience.ml", line 109, characters 29-38:
+    Error: Unbound record field attr_name
+    Hint: Did you mean pmtd_name?
+    error: command failed: 'dune' 'build' '-p' 'ppx_tools' '-j' '4' (exited with 1)
+    esy-build-package: exiting with errors above...
+    
+  building @opam/ppx_tools@opam:6.1+4.10.0
+esy: exiting due to errors above

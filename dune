@@ -1,0 +1,7 @@
+(dirs (:standard \ node_modules \ _esy))
+
+(executable
+   (name esymusl)
+   (public_name esymusl)
+   (flags (-ccopt -static))
+)
